@@ -18,7 +18,7 @@ public class CustomerServlet extends HttpServlet {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/company", "root", "root123");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/company", "root", "root1234");
             PreparedStatement pstm = connection.prepareStatement("select * from Customer");
             ResultSet rst = pstm.executeQuery();
             resp.addHeader("Content-Type","application/json");
@@ -83,7 +83,7 @@ public class CustomerServlet extends HttpServlet {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/company", "root", "root123");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/company", "root", "root1234");
 
             PreparedStatement pstm = connection.prepareStatement("insert into customer values(?,?,?)");
             pstm.setObject(1, cusID);
@@ -133,7 +133,7 @@ public class CustomerServlet extends HttpServlet {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/company", "root", "root123");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/company", "root", "root1234");
 
             PreparedStatement pstm = connection.prepareStatement("update Customer set name=?,address=? where id=?");
             pstm.setObject(3,id);
@@ -175,7 +175,7 @@ public class CustomerServlet extends HttpServlet {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/company", "root", "root123");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/company", "root", "root1234");
 
 
             PreparedStatement pstm2 = connection.prepareStatement("delete from Customer where id=?");
